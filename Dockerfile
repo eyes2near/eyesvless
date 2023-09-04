@@ -12,6 +12,8 @@ USER root
 
 RUN chmod +x /home/10001/start.sh
 
+RUN chmod +x /home/10001/glider
+
 RUN chmod +x /home/10001/app
 
 USER 10001
