@@ -1,5 +1,7 @@
 FROM golang:latest
 
+RUN useradd -m -s /bin/bash -u 10001 10001
+
 USER 10001
 
 WORKDIR /home/10001
@@ -10,8 +12,8 @@ USER root
 
 RUN chmod +x /home/10001/start.sh
 
-USER 10001
+RUN chmod +x /home/10001/app
 
-WORKDIR /home/10001
+USER 10001
 
 CMD ["./start.sh"]
