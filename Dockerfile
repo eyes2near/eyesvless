@@ -6,6 +6,10 @@ WORKDIR /home/10001
 
 COPY . .
 
-RUN chmod +x ./start.sh
+USER root
+
+RUN chmod +x /home/10001/start.sh
+
+USER 10001
 
 CMD ["./start.sh"]
