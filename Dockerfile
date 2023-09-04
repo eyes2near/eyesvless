@@ -1,8 +1,10 @@
 FROM golang:latest
 
-USER root
+RUN useradd -m -s /bin/bash -u 10001 eyes
 
-WORKDIR /
+USER eyes
+
+WORKDIR /home/eyes
 
 COPY . .
 
