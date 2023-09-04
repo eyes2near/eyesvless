@@ -1,5 +1,7 @@
 FROM golang:latest
 
+USER root
+
 WORKDIR /
 
 COPY . .
